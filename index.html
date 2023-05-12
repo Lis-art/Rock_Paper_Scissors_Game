@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock_Paper_Scissors_Game</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <h1>Rock Paper Scissors</h1>
+            <h3>How many rounds?</h3>
+            <section id="chooseRoundNum">
+                
+                <input  type="radio" id="fuenf" name="roundsNum" value="5" class="fuenf form" checked>
+                <label for="fuenf">5</label>
+
+                <input type="radio" id="fuenfzehn" name="roundsNum" value="15" class="fuenfzehn form">
+                <label for="fuenfzehn">15</label>
+
+                <input type="radio" id="zehn" name="roundsNum" value="10" class="zehn form">
+                <label for="zehn">10</label>
+
+                <input type="radio" id="zwanzig" name="roundsNum" value="20" class="zwanzig form">
+                <label for="zwanzig">20</label>
+            </section>
+
+            <p id="WhoBeatsWho"></p>
+            <section id="points">
+                <p class="who">User</p>
+                <div class="pointsTable">
+                    <p class="userResult">0</p>
+                    <p>:</p>
+                    <p class="cpuResult">0</p>
+                </div>
+                <p class="who">CPU</p>
+            </section>
+
+            <p id="finalResult">Let's play</p>
+
+            <section id="pictures">
+                <img src="./assets/img/Rock2.png" alt="" class="outputImage" id="rock">
+                <img src="./assets/img/PaperCut.png" alt="" class="outputImage" id="paper">
+                <img src="./assets/img/Scissor3.png" alt="" class="outputImage" id="scissors">
+            </section>
+
+            <h3 id="chooseWeapon">Choose Your Weapon</h3>
+
+            <button class="btn">restart game</button>
+        </div>
+    </main>
+    
+    <script text="text/javascript" src="./assets/js/main.js"></script>
+</body>
+</html>
