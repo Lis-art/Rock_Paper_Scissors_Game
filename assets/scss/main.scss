@@ -14,26 +14,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-:root {
-    --form-control-color: rebeccapurple;
-  }
-
-
-
 html {
     font-size: 62.5%;
 }
-
 img {
     max-width: 100%;
 }
 
-
+/* specific styles */
 
 main{
-
     .wrapper{
         background-image: url('../img/rsz_1v883-mynt-28.jpg');
         background-repeat: no-repeat;
@@ -41,34 +31,36 @@ main{
         background-size: cover; 
         max-width: 100vw;
         min-height: 100vh;
-/*         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; */
-        
-        
-        h1{
-            @include font-styles(4.8rem, 'PressStart', $white);
+        position: relative;
+        .headline{
+            @include font-styles(4.2rem, 'PressStart', white);
             text-align: center;
-            padding-top: 5%;
-            margin-bottom: 3%;
+            padding-top: 70px;
+            margin-bottom: 45px;
+            position: relative;
+            -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+            .headline span{
+                position: relative;
+                display: inline-block;
+                color: #fff;
+                animation: headline 1s infinite;
+                animation-delay: calc(.1s * var(--i));
+              }
         }
         h3{
-            @include font-styles(3rem, 'PressStart', $white);
+            @include font-styles(2.5rem, 'PressStart', white);
             text-align: center;
-            margin-bottom: 3%;
+            margin-bottom: 20px;
         }
         #chooseRoundNum{
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex(flex, center, center);
             place-content: center;
             column-gap: 13px;
-            
+            margin-bottom: 65px;
             .form {
                 align-items: center;
-                font-size: 2rem;
+                font-size: 1.8rem;
                 font-weight: bold;
                 line-height: 1.1;
                 display: grid;
@@ -80,15 +72,10 @@ main{
                 color: whitesmoke;
             }
             input[type="radio"] {
-                /* Add if not using autoprefixer */
                 -webkit-appearance: none;
-                /* Remove most all native input styles */
                 appearance: none;
-                
                 background-color: whitesmoke;
-                
                 margin: 0;
-              
                 font: inherit;
                 color: blue;
                 width: 1.15em;
@@ -96,7 +83,6 @@ main{
                 border: 0.15em solid whitesmoke;
                 border-radius: 50%;
                 transform: translateY(-0.075em);
-              
                 display: grid;
                 place-content: center;
             }
@@ -111,92 +97,95 @@ main{
                 box-shadow: inset 1em 1em whitesmoke;
                 background-color: whitesmoke;
             }
-              
             input[type="radio"]:checked::before {
                 transform: scale(1);
             }
-              
             input[type="radio"]:focus {
                 outline: max(2px, 0.15em) solid whitesmoke;
                 outline-offset: max(2px, 0.15em);
             }
-            
             label{
-                @include font-styles(2rem, 'PressStart', $white);
+                @include font-styles(1.5rem, 'PressStart', white);
                 align-items: center;
             } 
         }
         #WhoBeatsWho{
-            @include font-styles(3rem, 'PressStart', $white);
+            @include font-styles(3rem, 'PressStart', white);
             text-align: center;
-            padding: 2% 0;
+            padding: 5px 0;
         }
-
         #points{
             display: flex;
             justify-content: space-evenly;
             align-content: center;
             flex-wrap: wrap;
+            margin-bottom: 40px;
             p{
-                @include font-styles(2rem, 'PressStart', $white);
+                @include font-styles(2rem, 'PressStart', white);
                 align-items: center;
-                padding: 2%;
+                padding: 4px;
             }
             .pointsTable{
                 display: flex;
-                padding: 2%;
+                padding: 4px;
                     .userResult{
-                        @include font-styles(2rem, 'PressStart', $white);
-                        padding: 2%;
+                        @include font-styles(2.2rem, 'PressStart', white);
+                        padding: 4px;
                     }
                     p {
-                        @include font-styles(2rem, 'PressStart', $white);
-                        padding: 2%;
-                        
+                        @include font-styles(2.2rem, 'PressStart', white);
+                        padding: 4px;
                     }
                     .cpuResult{
-                        @include font-styles(2rem, 'PressStart', $white);
-                        padding: 2%;
+                        @include font-styles(2.2rem, 'PressStart', white);
+                        padding: 4px;
                     }
-            }
-            
+            } 
         }
-    
         #finalResult{
-            @include font-styles(2rem, 'PressStart', $white);
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            padding-top: 3%;
+            @include font-styles(2rem, 'PressStart', white);
+            @include flex(flex, center, center);
+            padding-top: 4px;
+            margin-bottom: 35px;
         }
         #pictures{
-            align-items: center;
-            padding-top: 3%;
-            display: flex; 
-            justify-content: center;
+            @include flex(flex, center, center);
+            padding-top: 4px;
+            margin-bottom: 12px;
+            img {
+                transition: transform .3s ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                } 
+            }
         }
         #chooseWeapon{
-            @include font-styles(2rem, 'PressStart', $white);
+            @include font-styles(2rem, 'PressStart', white);
             align-items: center;
+            margin-bottom: 30px;
         }
-        
         .btn {
-            @include font-styles(1.5rem, 'PressStart', $black);
+            @include font-styles(1.5rem, 'PressStart', black);
             text-align: center;
-            padding: 1%;
-            border: 1px solid $white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
+            padding: 9px;
+            border: 1px solid white;
+            @include flex(flex, center, center);
+            margin: 0 auto 10px auto;
             &:hover{
                 color: rgb(53, 53, 177);
-                background-color: $white;
-                transition: 1s;
+                background-color: white;
+                transition: 0.3s;
             }
         }
     }
 }    
 
-
+@keyframes headline {
+    0%, 40%, 100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  } 
     

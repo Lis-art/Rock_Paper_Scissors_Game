@@ -3,3 +3,9 @@
     font-family: $fontFamily , Arial, Helvetica, sans-serif;
     color: $color;
 }
+
+@mixin flex($display, $align-items, $justify-content){
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
