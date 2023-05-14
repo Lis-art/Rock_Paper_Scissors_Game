@@ -38,11 +38,11 @@ main .wrapper .headline {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 }
-main .wrapper .headline .headline span {
+main .wrapper .headline span {
   position: relative;
   display: inline-block;
   color: #fff;
-  animation: headline 1s infinite;
+  animation: headline 1.8s infinite;
   animation-delay: calc(0.1s * var(--i));
 }
 main .wrapper h3 {

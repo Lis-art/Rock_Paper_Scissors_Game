@@ -1,4 +1,4 @@
-@import "variables.scss";
+
 @import "mixin.scss";
 
 @font-face {
@@ -39,13 +39,13 @@ main{
             margin-bottom: 45px;
             position: relative;
             -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-            .headline span{
+            span{
                 position: relative;
                 display: inline-block;
                 color: #fff;
-                animation: headline 1s infinite;
+                animation: headline 1.8s infinite;
                 animation-delay: calc(.1s * var(--i));
-              }
+            }
         }
         h3{
             @include font-styles(2.5rem, 'PressStart', white);
@@ -182,10 +182,9 @@ main{
 
 @keyframes headline {
     0%, 40%, 100% {
-      transform: translateY(0)
+      transform: translateY(0);
     }
     20% {
-      transform: translateY(-20px)
+      transform: translateY(-20px);
     }
-  } 
-    
+  }   
