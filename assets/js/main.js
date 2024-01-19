@@ -26,7 +26,7 @@ if (roundCounter >= maxRoundNum){
     }
 };
 
-// mit queryAll werden alle Bilde angesteuert und die entsprechenden Funktionen allen Bildern zugeordnet
+// mit queryAll werden alle Bilder angesteuert und die entsprechenden Funktionen allen Bildern zugeordnet
 // jedes Bild als item - über id wird Name des jeweiligen Bildes ausgegeben
 // Runden Counter wird pro Click 1 hoch gezählt
 // nach User Click wird Funktion choice CPU ausgeführt 
@@ -43,7 +43,7 @@ document.querySelectorAll("img").forEach((item) => {
     });
 });
 
-// Auswahl Runden Radio Btns wird als Zahlwert ausgegeben wird
+// Auswahl Runden Radio Btns wird als Zahlwert ausgegeben 
 document.querySelectorAll("input").forEach((radioBtn) => {
 radioBtn.addEventListener("change", (e) => {
         e.preventDefault();
@@ -51,7 +51,7 @@ radioBtn.addEventListener("change", (e) => {
     });
 });
 
-// Function in der eine Zahl von 1 bis drei random gewählt wird + Festlegung welche Zahl welchem Zeichen entspricht
+// Function in der eine Zahl von 1 bis 3 random gewählt wird + Festlegung welche Zahl welchem Zeichen entspricht
 function cpuRandomChoice () {
     let randomNumber = Math.floor(Math.random() * 3);  
     if (randomNumber === 0) {
@@ -63,7 +63,7 @@ function cpuRandomChoice () {
     }
 };
 
-// Var für Punktestand zu Begin auf 0 gesetzt
+// Var für Punktestand zu Beginn auf 0 gesetzt
 let winsCPU = 0;
 let winsUSER = 0;
 
